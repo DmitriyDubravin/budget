@@ -1,0 +1,59 @@
+<div class="transfer {{ isLast ? 'last' : '' }}">
+  <div *ngIf="state === 'default'">
+    <button class="icon-sign" color="primary" mat-mini-fab disabled>
+      <mat-icon [inline]="true">{{ isOutcome ? "remove" : "add" }}</mat-icon>
+    </button>
+    <span class="name">{{ transfer.name }}</span>
+    <strong class="qty">{{ transfer.qty | number: "1.0-3" }}</strong>
+    <strong class="price">{{ transfer.price | number: "1.2-2" }}</strong>
+    <button class="icon" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="edit()">edit</mat-icon>
+    </button>
+    <button class="icon" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="remove()">delete</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="state === 'edit'" [formGroup]="transferForm">
+    <button class="icon-sign" color="primary" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="toggleIsOutcome()">{{
+        isOutcome ? "remove" : "add"
+      }}</mat-icon>
+    </button>
+    <mat-form-field class="name">
+      <input matInput formControlName="name" type="text" />
+    </mat-form-field>
+    <mat-form-field class="qty">
+      <input matInput formControlName="qty" type="text" />
+    </mat-form-field>
+    <mat-form-field class="price">
+      <input matInput formControlName="price" type="text" />
+    </mat-form-field>
+    <button class="icon" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="save()">check</mat-icon>
+    </button>
+    <button class="icon" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="reset()">close</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="state === 'add'" [formGroup]="transferForm">
+    <button class="icon-sign" color="primary" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="toggleIsOutcome()">{{
+        isOutcome ? "remove" : "add"
+      }}</mat-icon>
+    </button>
+    <mat-form-field class="name">
+      <input matInput formControlName="name" type="text" />
+    </mat-form-field>
+    <mat-form-field class="qty">
+      <input matInput formControlName="qty" type="text" />
+    </mat-form-field>
+    <mat-form-field class="price">
+      <input matInput formControlName="price" type="text" />
+    </mat-form-field>
+    <button class="icon" mat-mini-fab>
+      <mat-icon [inline]="true" (click)="add()">save</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="date-time" [formGroup]="dateForm">
+  <mat-form-field class="date">
+    <input matInput formControlName="date" (change)="onChange()" type="date" />
+  </mat-form-field>
+  <mat-form-field class="time">
+    <input matInput formControlName="time" (change)="onChange()" type="time" />
+  </mat-form-field>
+</div>

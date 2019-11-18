@@ -1,0 +1,23 @@
+@import "./../../styles/settings";
+
+.check {
+  position: relative;
+  margin: 0 auto $gap * 4;
+  border: 1px solid $gray;
+  padding: $gap $gap $gap * 2;
+  max-width: 500px;
+  background: $white;
+  box-shadow: 0 $gap / 2 $gap / 2 rgba($dark, 0.1);
+}
+
+.icon-close {
+  position: absolute;
+  top: $gap * -3.5;
+  left: $gap * -3.5;
+}
+
+.icon-save {
+  position: absolute;
+  right: $gap * -3.5;
+  bottom: $gap * -3.5;
+}

@@ -1,0 +1,30 @@
+<div class="check">
+  <button class="icon-close" mat-fab (click)="closeCheckEditor()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <app-date-editor
+    [date]="date"
+    (changeDate)="changeDate($event)"
+  ></app-date-editor>
+  <div *ngIf="currentTransfers">
+    <app-transfer-editor
+      *ngFor="let transfer of currentTransfers; index as i"
+      [transfer]="transfer"
+      [state]="editingId === transfer.id ? 'edit' : 'default'"
+      (editTransfer)="editTransfer($event)"
+      (removeTransfer)="removeTransfer($event)"
+      (resetTransfer)="resetTransfer($event)"
+      (saveTransfer)="saveTransfer($event)"
+    ></app-transfer-editor>
+  </div>
+  <div class="transfer-add">
+    <app-transfer-editor
+      state="add"
+      (addTransfer)="addTransfer($event)"
+    ></app-transfer-editor>
+  </div>
+  <app-total [transfers]="currentTransfers"></app-total>
+  <button class="icon-save" mat-fab (click)="saveCheck()">
+    <mat-icon>check</mat-icon>
+  </button>
+</div>

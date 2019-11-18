@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./styles/settings";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+body {
+  line-height: $base * 3;
+  font-size: $base * 2;
+  color: $fg;
+  background: $bg;
+  overflow-y: scroll;
+}
+
+button.mat-mini-fab {
+  width: $base * 3;
+  height: $base * 3;
+  line-height: $base * 3;
+  .mat-button-wrapper {
+    padding: 0;
+  }
+}
+.date-time .mat-form-field-wrapper {
+  // padding-bottom: $gap;
+}
+
+.main-container {
+  padding: $gap * 12 $gap * 3;
+}

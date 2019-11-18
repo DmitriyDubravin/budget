@@ -1,0 +1,5 @@
+<div class="transfer {{ isLast ? 'last' : '' }}">
+  <span class="name">{{ transfer.name }}</span>
+  <strong class="qty">{{ transfer.qty | number: "1.0-3" }}</strong>
+  <strong class="price">{{ transfer.price | number: "1.2-2" }}</strong>
+</div>

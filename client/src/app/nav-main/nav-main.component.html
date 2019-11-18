@@ -1,0 +1,19 @@
+<button
+  class="icon-nav-main"
+  mat-fab
+  [matMenuTriggerFor]="menu"
+  aria-label="Example icon-button with a menu"
+>
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/checks">
+    <span>Checks</span>
+  </button>
+  <button mat-menu-item routerLink="/period">
+    <span>Period</span>
+  </button>
+  <button mat-menu-item routerLink="/balance">
+    <span>Balance</span>
+  </button>
+</mat-menu>

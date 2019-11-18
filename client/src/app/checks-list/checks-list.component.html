@@ -1,0 +1,6 @@
+<div *ngIf="transfers && transfers.length > 0" class="check">
+  <app-checks-day
+    *ngFor="let dayTransfers of transfers"
+    [dayTransfers]="dayTransfers"
+  ></app-checks-day>
+</div>

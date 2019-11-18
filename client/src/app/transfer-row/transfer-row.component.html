@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="name">
+    {{ transfer.name }}
+  </div>
+  <div class="qty">
+    {{ transfer.qty | number: ".0-3" }}
+  </div>
+  <div class="avg">
+    {{ transfer.avg | number: "1.2-2" }}
+  </div>
+  <div class="price">
+    {{ transfer.prices | number: "1.2-2" }}
+  </div>
+</div>

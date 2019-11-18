@@ -1,0 +1,8 @@
+@import "./../../styles/settings";
+.date-time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $gap;
+  border-bottom: 2px solid $dark;
+  padding: $gap;
+}

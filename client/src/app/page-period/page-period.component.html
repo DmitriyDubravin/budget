@@ -1,0 +1,17 @@
+<div class="date-picker">
+  <app-date-editor
+    [date]="periodStart"
+    (changeDate)="changeStartDate($event)"
+  ></app-date-editor>
+</div>
+<div class="date-picker">
+  <app-date-editor
+    [date]="periodEnd"
+    (changeDate)="changeEndDate($event)"
+  ></app-date-editor>
+</div>
+<button mat-raised-button color="primary" (click)="changeDate()">Find</button>
+<app-transfers-table
+  [periodStart]="periodStart"
+  [periodEnd]="periodEnd"
+></app-transfers-table>

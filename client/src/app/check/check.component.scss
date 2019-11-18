@@ -1,0 +1,17 @@
+@import "./../../styles/settings";
+
+.icon-edit {
+  position: absolute;
+  top: $gap * -1.5;
+  right: $gap * -1.5;
+}
+.check {
+  position: relative;
+  margin-right: $gap * 2;
+  border: 1px solid $gray;
+  padding: $gap;
+  max-width: 300px;
+  min-width: 300px;
+  background: $white;
+  box-shadow: 0 $gap / 2 $gap / 2 rgba($dark, 0.1);
+}

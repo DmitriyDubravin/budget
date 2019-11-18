@@ -1,0 +1,13 @@
+@import "./../../styles/settings";
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: $gap;
+  font-weight: bold;
+  .title {
+  }
+  .price {
+    width: 100px;
+  }
+}

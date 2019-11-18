@@ -1,0 +1,29 @@
+@import '../../styles/settings';
+
+.transfer {
+  display: flex;
+  // justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: $gap;
+  padding: $gap / 2 $gap;
+  font-weight: 300;
+  &.last {
+    margin-bottom: 0;
+  }
+  .name {
+    margin-right: $gap;
+  }
+  .qty {
+    margin-left: auto;
+    font-weight: normal;
+    width: 20%;
+  }
+  .price {
+    font-weight: normal;
+    width: 30%;
+    text-align: right;
+  }
+  .icon-remove {
+    margin-left: $gap;
+  }
+}

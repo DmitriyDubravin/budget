@@ -1,0 +1,15 @@
+@import "./../../styles/settings";
+
+.date-time {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 $gap;
+}
+
+.date {
+  margin-right: $gap;
+  width: calc(100% - #{$gap * 18});
+}
+.time {
+  width: $gap * 17;
+}

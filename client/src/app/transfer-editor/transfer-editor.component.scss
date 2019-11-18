@@ -1,0 +1,42 @@
+@import "../../styles/settings";
+
+.transfer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: $gap;
+  padding: $gap / 2 $gap;
+  font-weight: 300;
+  // width: 100%;
+  .ng-star-inserted {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &.last {
+    margin-bottom: 0;
+  }
+  .icon-sign {
+    margin-right: $gap;
+    width: $gap * 3;
+  }
+  .name {
+    margin-right: $gap;
+    width: calc(100% - #{$gap * 32});
+  }
+  .qty {
+    margin-right: $gap;
+    font-weight: normal;
+    width: $gap * 7;
+  }
+  .price {
+    font-weight: normal;
+    width: $gap * 10;
+    text-align: right;
+  }
+  .icon {
+    margin-left: $gap;
+    width: $gap * 3;
+  }
+}

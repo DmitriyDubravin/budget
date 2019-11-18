@@ -1,0 +1,7 @@
+<button class="icon-edit" mat-fab color="primary" (click)="openCheckEditor()">
+  <mat-icon>add</mat-icon>
+</button>
+
+<app-check-editor *ngIf="isShownCheckEditor"></app-check-editor>
+
+<app-checks-list></app-checks-list>

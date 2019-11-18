@@ -1,0 +1,11 @@
+<div class="check">
+  <button mat-mini-fab class="icon-edit" (click)="edit()">
+    <mat-icon [inline]="true">edit</mat-icon>
+  </button>
+  <app-date [transfers]="checkTransfers"></app-date>
+  <app-transfer
+    *ngFor="let transfer of checkTransfers; index as i"
+    [transfer]="transfer"
+  ></app-transfer>
+  <app-total [transfers]="checkTransfers"></app-total>
+</div>
