@@ -3,8 +3,9 @@ import { HttpClient } from "@angular/common/http";
 import { Transfer } from "./transfer";
 import { BehaviorSubject } from "rxjs";
 import { isValue } from "./helpers.js";
+import { environment } from './../environments/environment';
 
-const SERVER = "http://localhost:3000/transfers";
+const SERVER = `http://${environment.apiUrl}:3000/transfers`;
 
 @Injectable({
   providedIn: "root"
