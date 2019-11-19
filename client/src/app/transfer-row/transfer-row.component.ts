@@ -7,7 +7,7 @@ import { Transfer } from "../transfer";
   styleUrls: ["./transfer-row.component.scss"]
 })
 export class TransferRowComponent implements OnInit {
-  @Input() transfer: Transfer;
+  @Input() transfer;
 
   constructor() {}
 
